@@ -5,7 +5,7 @@
   "content_scripts": [
     {
       "matches": ["http://www.amazon.co.jp/*"],
-      "js": ["sendrequest.js"]
+      "js": ["sendrequest.min.js"]
     }
   ],
   "homepage_url": "http://ymkjp.blogspot.jp/2012/11/kindlize-it-chrome-extension.html",

@@ -2,7 +2,7 @@ kindlize-it
 ===========
 This is lightweight Chrome Extension which requests automatically for Kindle Edition of books you browse on Amazon.co.jp .
 
-<a href="https://chrome.google.com/webstore/detail/kindlize-it/pclldhodilcmpfipmbibehflengdachd?hl=ja">Chrome ウェブストア - Kindlize It</a>
+<a href="https://chrome.google.com/webstore/detail/kindlize-it/lmeeghblnndbojbcdahjgoakgclnpfcl">Chrome Web Store - Kindlize It</a>
 
 SPECs
 ------

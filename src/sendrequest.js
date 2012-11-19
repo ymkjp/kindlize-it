@@ -1,20 +1,49 @@
 (function () {
     "use strict";
-    window.addEventListener("DOMContentLoaded", sendRequest(), false);
-    function sendRequest() {
-        if (document.getElementById('storeID').value === "books") {
-            var asin = document.getElementById('ASIN').value || '',
-                targetUrl = 'http://www.amazon.co.jp/gp/digital/fiona/detail/request-kindle-edition/ref=dtp_dp_su_' + asin + '?ie=UTF8&a=' + asin,
-                xhr = new XMLHttpRequest();
-            xhr.open("GET", targetUrl, true);
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4) {
-                    var title = document.getElementById("btAsinTitle").innerHTML,
-                        tgt = document.getElementsByClassName("fionaPublish");
-                    tgt[0].innerHTML = "<span style=\"color: #999; font-weight: bold; background-color: #FFF; font-size: medium;\"><b>Kindle It</b>: 『<a href=" + targetUrl + ">" + title + "</a>』の Kindle化リクエストを送信しました。</span>";
-                }
-            }
-            xhr.send();
-        }
+    var category = document.getElementById('storeID') || false,
+        asin = document.getElementById('ASIN') || false;
+    if (!category || !asin || !isBook(category) || haveAlreadyKindleEdition()) {
+        return false;
     }
-})();
+    var targetUrl = getTargetUrl(asin);
+    sendRequest(targetUrl);
+
+    function isBook(category) {
+        if (category.value === "books") {
+            return true;
+        }
+        return false;
+    }
+
+    function haveAlreadyKindleEdition() {
+        if (document.getElementsByName("goKindleStaticPopDiv")[0] || document.getElementById("kindle_meta_binding_winner")) {
+            return true;
+        }
+        return false;
+    }
+
+    function getTargetUrl(asin) {
+        return 'http://www.amazon.co.jp/gp/digital/fiona/detail/request-kindle-edition/ref=dtp_dp_su_' + asin.value + '?ie=UTF8&a=' + asin.value;
+    }
+
+    function sendRequest(targetUrl) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", targetUrl, true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                writeResult();
+                // TODO: xhr.responseText
+            }
+        };
+        xhr.send();
+    }
+
+    function writeResult() {
+        var title = document.getElementById("btAsinTitle") || '',
+            tgtEle = document.getElementsByClassName("fionaPublish") || false;
+        if (!tgtEle) {
+            return false;
+        }
+        tgtEle[0].innerHTML += "<span style=\"color: #999; background-color: #FFF; font-size: medium;\"><b>Kindlize It</b>: 『<a href=" + targetUrl + ">" + title.innerHTML + "</a>』の Kindle 化リクエストを送信しました。</span>";
+    }
+}());
