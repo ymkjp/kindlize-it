@@ -1,7 +1,7 @@
 {
   "name": "Kindlize It",
   "version": "1.0",
-  "description": "This is the Chrome Extension which requests automatically for Kindle Edition of the book you browse on Amazon.co.jp.",
+  "description": "This is the Chrome Extension which requests automatically for Kindle Edition of books you browse on Amazon.co.jp.",
   "content_scripts": [
     {
       "matches": ["http://www.amazon.co.jp/*"],
