@@ -16,7 +16,7 @@
     }
 
     function haveAlreadyKindleEdition() {
-        if (document.getElementsByName("goKindleStaticPopDiv")[0] || document.getElementById("kindle_meta_binding_winner")) {
+        if (document.getElementById("kindle_meta_binding_winner")) {
             return true;
         }
         return false;
