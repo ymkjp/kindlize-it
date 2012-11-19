@@ -3,6 +3,8 @@ kindlize-it
 
 This is the Chrome Extension which requests automatically for Kindle Edition of books you browse on Amazon.co.jp .
 
+<a href="https://chrome.google.com/webstore/detail/gedmpjkmjfpgdafhpcclhhekpeomnkdg/publish-accepted?hl=ja&gl=JP">Chrome ウェブストア - Kindlize It</a>
+
 SPECs
 ------
 * It run only on browsing http://www.Amazon.co.jp/* .
@@ -11,6 +13,6 @@ SPECs
 
 Licence
 -----
-Copyright &copy; 2011 ymkjp
+Copyright &copy; 2011 Kenta ymkjp YAMAMOTO
 Distributed under the [MIT License][mit].
 [MIT]: http://www.opensource.org/licenses/mit-license.php
