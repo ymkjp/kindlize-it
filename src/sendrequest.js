@@ -1,12 +1,14 @@
 (function () {
     "use strict";
-    var category = document.getElementById('storeID') || false,
-        asin = document.getElementById('ASIN') || false;
-    if (!category || !asin || !isBook(category) || haveAlreadyKindleEdition()) {
-        return false;
-    }
-    var targetUrl = getTargetUrl(asin);
-    sendRequest(targetUrl);
+    (function () {
+            var category = document.getElementById('storeID') || false,
+                asin = document.getElementById('ASIN') || false;
+            if (!category || !asin || !isBook(category) || haveAlreadyKindleEdition()) {
+                return false;
+            }
+            var targetUrl = getTargetUrl(asin);
+            sendRequest(targetUrl);
+    }());
 
     function isBook(category) {
         if (category.value === "books") {
@@ -31,19 +33,19 @@
         xhr.open("GET", targetUrl, true);
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
-                writeResult();
+                writeResult(targetUrl);
                 // TODO: xhr.responseText
             }
         };
         xhr.send();
     }
 
-    function writeResult() {
+    function writeResult(targetUrl) {
         var title = document.getElementById("btAsinTitle") || '',
             tgtEle = document.getElementsByClassName("fionaPublish") || false;
         if (!tgtEle) {
             return false;
         }
-        tgtEle[0].innerHTML += "<span style=\"color: #999; background-color: #FFF; font-size: medium;\"><b>Kindlize It</b>: 『<a href=" + targetUrl + ">" + title.innerHTML + "</a>』の Kindle 化リクエストを送信しました。</span>";
+        tgtEle[0].innerHTML += "<span style=\"color: #999; background-color: #FFF; font-size: medium;\"><p><b>Kindlize It</b>: 『<a href=" + targetUrl + ">" + title.innerHTML + "</a>』の Kindle 化リクエストを送信しました。</p></span>";
     }
 }());
