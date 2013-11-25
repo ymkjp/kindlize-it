@@ -1,27 +1,21 @@
 (function () {
     "use strict";
     (function () {
-            var category = document.getElementById('storeID') || false,
-                asin = document.getElementById('ASIN') || false;
+            var category = document.getElementById('storeID') || null,
+                asin = document.getElementById('ASIN') || null;
             if (!category || !asin || !isBook(category) || haveAlreadyKindleEdition()) {
-                return false;
+                return;
             }
             var targetUrl = getTargetUrl(asin);
             sendRequest(targetUrl);
     }());
 
     function isBook(category) {
-        if (category.value === "books") {
-            return true;
-        }
-        return false;
+        return (category.value === "books");
     }
 
     function haveAlreadyKindleEdition() {
-        if (document.getElementById("kindle_meta_binding_winner")) {
-            return true;
-        }
-        return false;
+        return (document.getElementById("kindle_meta_binding_winner"));
     }
 
     function getTargetUrl(asin) {
