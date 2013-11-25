@@ -15,7 +15,7 @@
     }
 
     function haveAlreadyKindleEdition() {
-        return (document.getElementById("kindle_meta_binding_winner"));
+        return !!(document.getElementById("kindle_meta_binding_winner"));
     }
 
     function getTargetUrl(asin) {
