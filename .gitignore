@@ -40,5 +40,6 @@ jspm_packages
 ### Project
 !/.editorconfig
 !/.travis.yml
+!/.github
 *.pem
-*.min.js
+/lib/**/*.min.js
