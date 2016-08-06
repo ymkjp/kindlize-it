@@ -1,6 +1,6 @@
 {
   "name": "kindlize-it",
-  "description": "Chrome Extension to send an automatic request for Kindle Edition on amazon.co.jp.",
+  "description": "A Chrome Extension to send an automatic request for Kindle Edition on amazon.co.jp.",
   "repository": {
     "type": "git",
     "url": "https://github.com/ymkjp/kindlize-it"

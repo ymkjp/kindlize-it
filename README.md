@@ -3,13 +3,12 @@ kindlize-it
 
 [![Build Status](https://travis-ci.org/ymkjp/kindlize-it.svg?branch=master)](https://travis-ci.org/ymkjp/kindlize-it)
 
-A Chrome Extension to Send an automatic request for Kindle Edition on [amazon.co.jp](https://amazon.co.jp/).
+A Chrome Extension to send an automatic request for Kindle Edition on [amazon.co.jp](https://amazon.co.jp/).
 
 
 #### Chrome Extension
 
-* [Chrome Web Store - Kindlize It](https://chrome.google.com/webstore/detail/kindlize-it/lmeeghblnndbojbcdahjgoakgclnpfcl)
-
+* [KindlizeIt \- Chrome Web Store](https://chrome.google.com/webstore/detail/kindlizeit/lmeeghblnndbojbcdahjgoakgclnpfcl)
 
 #### Screenshot
 
