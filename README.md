@@ -1,17 +1,16 @@
 kindlize-it
-===========
-This is lightweight Chrome Extension which requests automatically for Kindle Edition of books you browse on Amazon.co.jp .
+===
 
-<a href="https://chrome.google.com/webstore/detail/kindlize-it/lmeeghblnndbojbcdahjgoakgclnpfcl">Chrome Web Store - Kindlize It</a>
+[![Build Status](https://travis-ci.org/ymkjp/kindlize-it.svg?branch=master)](https://travis-ci.org/ymkjp/kindlize-it)
 
-SPECs
-------
-* It runs only on browsing http://www.Amazon.co.jp/* .
-* If Amazon's DOM shows a "books" category, sends request for Kindle Edition.
-* It get a async (by XMLHttpRequest), and connection returns "complete" then it shows in the sense of "Done" (So it's better to fix to check a responseText, not only a readyState).
+A Chrome Extension to Send an automatic request for Kindle Edition on [amazon.co.jp](https://amazon.co.jp/).
 
-Licence
------
-Copyright &copy; 2011 Kenta ymkjp YAMAMOTO
-Distributed under the [MIT License][mit].
-[MIT]: http://www.opensource.org/licenses/mit-license.php
+
+#### Chrome Extension
+
+* [Chrome Web Store - Kindlize It](https://chrome.google.com/webstore/detail/kindlize-it/lmeeghblnndbojbcdahjgoakgclnpfcl)
+
+
+#### Screenshot
+
+![screenshot](https://i.gyazo.com/86ea33db83c24666043a55ffcb77e62d.png)
