@@ -1,6 +1,6 @@
 {
   "name": "KindlizeIt",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Send an automatic request for Kindle Edition on amazon.co.jp.",
   "icons": {
     "16": "icon_128x128.png",
