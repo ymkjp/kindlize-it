@@ -3,6 +3,8 @@ kindlize-it
 
 [![Build Status](https://travis-ci.org/ymkjp/kindlize-it.svg?branch=master)](https://travis-ci.org/ymkjp/kindlize-it)
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/rating/lmeeghblnndbojbcdahjgoakgclnpfcl.svg?maxAge=2592000)](https://chrome.google.com/webstore/detail/kindlizeit/lmeeghblnndbojbcdahjgoakgclnpfcl)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/d/lmeeghblnndbojbcdahjgoakgclnpfcl.svg?maxAge=2592000)](https://chrome.google.com/webstore/detail/kindlizeit/lmeeghblnndbojbcdahjgoakgclnpfcl)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/lmeeghblnndbojbcdahjgoakgclnpfcl.svg?maxAge=2592000)](https://chrome.google.com/webstore/detail/kindlizeit/lmeeghblnndbojbcdahjgoakgclnpfcl)
 
 A Chrome Extension to send an automatic request for Kindle Edition on [amazon.co.jp](https://amazon.co.jp/).
 
